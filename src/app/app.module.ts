@@ -12,6 +12,9 @@ import { ContactPage } from '../pages/contact/contact';
 import { FeedsPage } from '../pages/feeds/feeds';
 import { RssProvider } from '../providers/rss-service/rss-service';
 import { IntroPage } from '../pages/intro/intro';
+
+import { HttpModule } from '@angular/http';
+import { InAppBrowser} from '@ionic-native/in-app-browser'
 @NgModule({
   declarations: [
     MyApp,
@@ -24,7 +27,8 @@ import { IntroPage } from '../pages/intro/intro';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,7 +44,8 @@ import { IntroPage } from '../pages/intro/intro';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    RssProvider
+    RssProvider,
+    InAppBrowser
   ]
 })
 export class AppModule {}
