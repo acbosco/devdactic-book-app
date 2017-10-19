@@ -15,6 +15,8 @@ import { IntroPage } from '../pages/intro/intro';
 
 import { HttpModule } from '@angular/http';
 import { InAppBrowser} from '@ionic-native/in-app-browser'
+import { YtProvider } from '../providers/yt/yt';
+import {YoutubeVideoPlayer} from '@ionic-native/youtube-video-player'
 @NgModule({
   declarations: [
     MyApp,
@@ -45,7 +47,9 @@ import { InAppBrowser} from '@ionic-native/in-app-browser'
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     RssProvider,
-    InAppBrowser
+    InAppBrowser,
+    YtProvider,
+    YoutubeVideoPlayer
   ]
 })
 export class AppModule {}
